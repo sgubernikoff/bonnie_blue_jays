@@ -26,11 +26,15 @@
   color: var(--grey-mid);
   padding: 12px 24px;
   border-bottom: 2px solid transparent;
-  transition: color var(--transition), border-color var(--transition);
+  transition:
+    color var(--transition),
+    border-color var(--transition);
   margin-bottom: -1px;
 }
 
-.tab:hover { color: var(--white); }
+.tab:hover {
+  color: var(--white);
+}
 
 .tab--active {
   color: var(--blue);
@@ -153,4 +157,76 @@
   font-weight: 700;
   font-style: italic;
   color: var(--blue) !important;
+}
+
+/* ── Captain badge ── */
+.captain-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-condensed);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  background: var(--blue);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 7px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.player-card--captain {
+  border-left: 2px solid var(--blue);
+}
+
+/* ── Retired section ── */
+.retired-section {
+  margin-top: 56px;
+}
+
+.retired-label {
+  font-family: var(--font-condensed);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 16px;
+}
+
+.retired-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.retired-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: var(--black-soft);
+  border: 1px solid var(--grey-dark);
+  border-radius: var(--radius);
+  opacity: 0.6;
+}
+
+.retired-card__number {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--blue);
+
+  text-decoration-color: var(--grey-dark);
+}
+
+.retired-card__name {
+  font-family: var(--font-condensed);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--grey-light);
 }

@@ -173,3 +173,41 @@
   background: rgba(232, 94, 94, 0.1);
   border: 1px solid rgba(232, 94, 94, 0.3);
 }
+
+/* ── Playoff divider row ── */
+.row--playoff-header td {
+  padding: 20px 16px 8px;
+  border-bottom: none;
+}
+
+.playoff-label {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold, #d4a843);
+  color: var(--blue);
+}
+
+.row--playoff .cell--opponent {
+  color: var(--blue) !important;
+}
+
+/* ── Forfeit note inside badge ── */
+.badge-forfeit {
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  opacity: 0.75;
+  margin-left: 3px;
+  text-transform: uppercase;
+}
+
+/* ── Week cell ── */
+.cell--week {
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  color: var(--grey-mid);
+  letter-spacing: 0.08em;
+  min-width: 28px;
+}

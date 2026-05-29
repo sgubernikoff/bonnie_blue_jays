@@ -110,8 +110,42 @@
 @media (max-width: 640px) {
   .navbar__links {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--black-soft);
+    border-bottom: 1px solid var(--blue-outline);
+    padding: 16px 0;
+    gap: 0;
   }
+
+  .navbar__links--open {
+    display: flex;
+  }
+
+  .navbar__link {
+    display: block;
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+
+  .navbar__link::after {
+    display: none;
+  }
+
   .navbar__burger {
     display: flex;
+  }
+
+  .navbar__burger--open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .navbar__burger--open span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar__burger--open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
   }
 }

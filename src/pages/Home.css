@@ -225,5 +225,12 @@
   }
   .quicklinks {
     grid-template-columns: 1fr;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .qlink {
+    padding: 24px 28px;
   }
 }

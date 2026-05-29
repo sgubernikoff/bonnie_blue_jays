@@ -1,31 +1,39 @@
-import { NavLink } from 'react-router-dom'
-import './Navbar.css'
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 
 const links = [
-  { to: '/',         label: 'Home' },
-  { to: '/schedule', label: 'Schedule' },
-  { to: '/stats',    label: 'Stats & Roster' },
-  { to: '/gallery',  label: 'Gallery' },
-]
+  { to: "/", label: "Home" },
+  { to: "/schedule", label: "Schedule" },
+  { to: "/stats", label: "Stats & Roster" },
+  { to: "/gallery", label: "Gallery" },
+];
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar__inner">
-        <NavLink to="/" className="navbar__wordmark">
+        <NavLink
+          to="/"
+          className="navbar__wordmark"
+          onClick={() => setOpen(false)}
+        >
           <span className="navbar__wordmark-main">Bonnie</span>
           <span className="navbar__wordmark-sub">Blue Jays</span>
         </NavLink>
 
-        <ul className="navbar__links">
+        <ul className={`navbar__links ${open ? "navbar__links--open" : ""}`}>
           {links.map(({ to, label }) => (
             <li key={to}>
               <NavLink
                 to={to}
-                end={to === '/'}
+                end={to === "/"}
                 className={({ isActive }) =>
-                  `navbar__link${isActive ? ' navbar__link--active' : ''}`
+                  `navbar__link${isActive ? " navbar__link--active" : ""}`
                 }
+                onClick={() => setOpen(false)}
               >
                 {label}
               </NavLink>
@@ -33,11 +41,16 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile hamburger — wires up below */}
-        <button className="navbar__burger" aria-label="Toggle menu">
-          <span /><span /><span />
+        <button
+          className={`navbar__burger ${open ? "navbar__burger--open" : ""}`}
+          aria-label="Toggle menu"
+          onClick={() => setOpen((o) => !o)}
+        >
+          <span />
+          <span />
+          <span />
         </button>
       </div>
     </nav>
-  )
+  );
 }

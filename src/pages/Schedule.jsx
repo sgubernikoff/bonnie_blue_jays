@@ -130,7 +130,6 @@ export default function Schedule() {
     <main className="page-wrapper">
       <div className="container">
         <header className="sched-header">
-          <p className="tag">Season {SEASON}</p>
           <h1 className="section-heading">Schedule</h1>
 
           <div className="record-strip">

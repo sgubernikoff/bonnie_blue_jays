@@ -211,3 +211,54 @@
   letter-spacing: 0.08em;
   min-width: 28px;
 }
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  /* Record strip full width */
+  .record-strip {
+    width: 100%;
+  }
+
+  .record-item {
+    flex: 1;
+    padding: 14px 8px;
+  }
+
+  .record-num {
+    font-size: 2.2rem;
+  }
+
+  /* Hide less critical columns on mobile */
+  .sched-table th.col--field,
+  .sched-table td.cell--field,
+  .sched-table th.col--ha,
+  .sched-table td.cell--ha,
+  .sched-table th.col--time,
+  .sched-table td.cell--time {
+    display: none;
+  }
+
+  .sched-table th,
+  .sched-table td {
+    padding: 14px 10px;
+  }
+
+  .sched-table th:first-child,
+  .sched-table td:first-child {
+    padding-left: 0;
+  }
+
+  .sched-table th:last-child,
+  .sched-table td:last-child {
+    padding-right: 0;
+  }
+
+  .cell--opponent {
+    font-size: 0.9rem;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    padding: 3px 7px;
+  }
+}

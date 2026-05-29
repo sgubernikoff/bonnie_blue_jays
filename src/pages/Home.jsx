@@ -2,15 +2,18 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
+const base = import.meta.env.BASE_URL;
+const img = (f) => `${base}images/${f}`;
+
 const SLIDES = [
-  { src: "/images/49F155F8-C42F-4FC0-A07C-C2CFA5354F93.jpeg", caption: "" },
-  { src: "/images/0D826301-83D0-47CB-BA3A-F0216ACDD863.jpeg", caption: "" },
-  { src: "/images/E279B31E-65D6-4716-B5A2-04BF5316A063.jpeg", caption: "" },
-  { src: "/images/74160D17-65CB-4E8F-8344-9CE09AFEE86C.jpeg", caption: "" },
-  { src: "/images/66833456-6206-4FE6-BC54-1536C6C88904.jpeg", caption: "" },
-  { src: "/images/B022A86D-6F5A-4434-84D9-D3F49DF7642A.jpeg", caption: "" },
-  { src: "/images/B5118E7C-B756-40F9-9624-A6B6D546740B.jpeg", caption: "" },
-  { src: "/images/DB2D08EE-97FE-4BCE-969A-C58C6CE1E292.jpeg", caption: "" },
+  { src: img("49F155F8-C42F-4FC0-A07C-C2CFA5354F93.jpeg"), caption: "" },
+  { src: img("0D826301-83D0-47CB-BA3A-F0216ACDD863.jpeg"), caption: "" },
+  { src: img("E279B31E-65D6-4716-B5A2-04BF5316A063.jpeg"), caption: "" },
+  { src: img("74160D17-65CB-4E8F-8344-9CE09AFEE86C.jpeg"), caption: "" },
+  { src: img("66833456-6206-4FE6-BC54-1536C6C88904.jpeg"), caption: "" },
+  { src: img("B022A86D-6F5A-4434-84D9-D3F49DF7642A.jpeg"), caption: "" },
+  { src: img("B5118E7C-B756-40F9-9624-A6B6D546740B.jpeg"), caption: "" },
+  { src: img("DB2D08EE-97FE-4BCE-969A-C58C6CE1E292.jpeg"), caption: "" },
 ];
 
 const PLACEHOLDER_COUNT = 3;

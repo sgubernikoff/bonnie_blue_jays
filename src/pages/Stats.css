@@ -1,0 +1,156 @@
+.stats-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-heading em {
+  font-style: italic;
+  color: var(--blue);
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--grey-dark);
+  margin-bottom: 40px;
+}
+
+.tab {
+  font-family: var(--font-condensed);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+  padding: 12px 24px;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+  margin-bottom: -1px;
+}
+
+.tab:hover { color: var(--white); }
+
+.tab--active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+/* ── Roster Grid ── */
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--grey-dark);
+  border: 1px solid var(--grey-dark);
+}
+
+.player-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--black-soft);
+  transition: background var(--transition);
+}
+
+.player-card:hover {
+  background: var(--black-mid);
+}
+
+.player-card__number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--blue);
+  opacity: 0.6;
+  line-height: 1;
+  min-width: 48px;
+}
+
+.player-card__name {
+  font-family: var(--font-condensed);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+
+.player-card__pos {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+  margin-top: 2px;
+}
+
+/* ── Stats Table ── */
+.stats-table-wrap {
+  overflow-x: auto;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-condensed);
+}
+
+.stats-table thead tr {
+  border-bottom: 1px solid var(--blue-outline);
+}
+
+.stats-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  cursor: default;
+}
+
+.stats-table tbody tr {
+  border-bottom: 1px solid var(--grey-dark);
+  transition: background var(--transition);
+}
+
+.stats-table tbody tr:hover {
+  background: var(--black-soft);
+}
+
+.stats-table td {
+  padding: 16px 14px;
+  font-size: 0.95rem;
+  color: var(--grey-light);
+  text-align: left;
+}
+
+.cell--num {
+  color: var(--grey-mid);
+  font-size: 0.85rem;
+}
+
+.cell--name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--white) !important;
+}
+
+.cell--pos {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-mid) !important;
+}
+
+.cell--avg {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--blue) !important;
+}

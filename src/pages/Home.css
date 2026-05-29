@@ -178,7 +178,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: var(--grey-dark);
+
   margin-top: 0;
 }
 
